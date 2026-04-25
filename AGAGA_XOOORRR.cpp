@@ -13,7 +13,7 @@ using namespace std;
 
 void solve() {
 	int n;
-	if (!(cin >> n)) return;
+	cin >> n;
 
 	vector<long long> arr(n);
 	long long total_xor = 0;
@@ -42,7 +42,7 @@ void solve() {
 
 		if (current_segment_xor == total_xor) {
 			segment_count++;
-			current_segment_xor = 0; // Reset to start finding the next segment
+			current_segment_xor = 0;
 		}
 	}
 
@@ -53,7 +53,6 @@ void solve() {
 		cout << "NO" << endl;
 	}
 }
-
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
@@ -66,4 +65,5 @@ int main() {
 	}
 
 	return 0;
-}
+} //* T: O(t*n) = O(3e4)
+//* S: O(1)
